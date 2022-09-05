@@ -1,0 +1,11 @@
+const express = require('express');
+const router = express.Router();
+const accountControl = require('../../controllers/tron/account.js');
+const addressControl = require('../../controllers/tron/address.js');
+const helperControl = require('../../controllers/tron/helper.js');
+router.post('/create-account', accountControl.create_account);
+router.post('/addresstohex', addressControl.base58_to_hex);
+router.post('/addressfromhex', addressControl.hex_to_base58);
+router.post('/from-private-key-address', addressControl.privatekey_to_base58);
+router.post('/from-decimal-to-hex', helperControl.fromDecimal_to_hex);
+module.exports = router;
