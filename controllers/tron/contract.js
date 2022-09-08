@@ -11,8 +11,6 @@ module.exports.contract_instance = async function (req,res) {
         response.id = req.id;
         response.instance = await TronWeb.contract(CONTRACT_ABI, CONTRACT_ADDRESS);
         res.json(response);
-
-        // let res = await instance.totalSupply().call({_isConstant:true})
     }
     catch (error) 
     {

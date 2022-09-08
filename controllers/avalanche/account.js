@@ -1,5 +1,5 @@
-const webEth3 = require('./index.js');
-const Web3 = webEth3.webEth3;
+const web3Avax = require('./index.js');
+const Web3 = web3Avax.web3Avax;
 var response = {};
 module.exports.create_account = async function (req,res) {
     try 

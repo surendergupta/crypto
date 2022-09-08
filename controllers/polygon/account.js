@@ -1,5 +1,5 @@
-const webEth3 = require('./index.js');
-const Web3 = webEth3.webEth3;
+const webMatic3 = require('./index.js');
+const Web3 = webMatic3.webMatic3;
 var response = {};
 module.exports.create_account = async function (req,res) {
     try 
