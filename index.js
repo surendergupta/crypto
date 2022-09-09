@@ -44,6 +44,7 @@ const ethereumAccountRoute = require('./routes/ethereum/account.js');
 const binanceAccountRoute = require('./routes/binance/account.js');
 const polygonAccountRoute = require('./routes/polygon/account.js');
 const avalancheAccountRoute = require('./routes/avalanche/account.js');
+const priceRoute = require('./routes/price/price.js');
 //const bitcoinAccountRoute = require('./routes/bitcoin/account.js');
 
 app.use('/api/tron/account', tronAccountRoute);
@@ -98,6 +99,11 @@ app.use('/api/ethereum/account', ethereumAccountRoute);
 
 //app.use('/api/bitcoin/account', bitcoinAccountRoute);
 // http://localhost:5000/api/bitcoin/account/create-account
+
+
+app.use('/api/price', priceRoute);
+// http://localhost:5000/api/price/price-usd
+// http://localhost:5000/api/price/price-trx
 
 
 function assignId (req, res, next) {
